@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./font/icofont/icofont.css" />
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" type="image/jpg" href="images/coding.png" />
+  <script src="https://kit.fontawesome.com/c20cf1ee18.js" crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
+  <title>Developer Student Community</title>
+</head>
+
+<body>
+  <!-- -------------------------------------------------------NAV BAR-------------------------------------- -->
+  <nav>
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo"><a href="./index.html"><img src="./images/dsc-logo.svg" height="40px"></a></div>
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="index.html#communityCollabs">Community Partners</a></li>
+      <li><a href="event.html">Events</a></li>
+      <li><a href="joinus.html"><i class="icofont-ui-user"></i> Profile</a></li>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+  </nav>
+  <!-- -------------------------------nav bar end-------------------------------- -->
+
+  <!-- START Cover -->
+  <section class="sections join-header-bg-img containers">
+    <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="./images/bg.png" data-z-index="2"></div> -->
+    <div class="join-inner-container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 align-content-start">
+          <div class="join-header-content text-white">
+            JOIN US NOW
+          </div>
+        </div>
+        <div class="col-md-6">
+
+          <img src="./images/male-faces.svg" class="text-center clipart" id="faces-join">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="align-items-center join-header-content">
+            <div class="text-center ">
+              <a href="https://discord.gg/2swNB74rZU" target="_blank">
+                <button type="button" class="btn btn-danger btn-lg  wow animate__animated animate__fadeIn"
+                  id="join-us">Join
+                  Us</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- END Cover -->
+
+
+
+
+  <!-- ***********************************************SIGN IN***************************************************************** -->
+
+
+  <!-- ***************************************************************SIGN UP************************************************************ -->
+
+  <div class="container">
+    <div class="row py-5 mt-4 align-items-center">
+
+      <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+        <img src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg" alt=""
+          class="img-fluid mb-3 d-none d-md-block">
+      </div>
+      <div class="col-md-7 col-lg-6" id="signUpForm">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 col-lg-8 mx-auto">
+                <h3 class="login-heading mb-4">Become Member!</h3>
+
+                <div class="form-label-group">
+                  <input type="email" id="signUpEmail" class="form-control" placeholder="Email address" required
+                    autofocus>
+                  <label for="signUpEmail">Email *</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="signUpPassword" class="form-control" placeholder="Password" required>
+                  <label for="signUpPassword">Password *</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="confirmInputPassword" class="form-control" placeholder="Password" required>
+                  <label for="confirmInputPassword">Confirm Password *</label>
+                </div>
+
+                <!-- <div class="form-label-group">
+                    <select id="gender" name="jobtitle" class="form-control" required>
+                      <option value="">Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                  </select>
+                  </div> -->
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                  type="submit" id="signUp" onclick="signUp()">Sign up </button>
+                <div class="align-content-end">Already A Member
+                  <a class="small" id="switchToSignIn">Sign in</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7 col-lg-6" id="signInForm">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 col-lg-8 mx-auto">
+                <h3 class="login-heading mb-4">Welcome Back!</h3>
+
+
+
+                <div class="form-label-group">
+                  <input type="email" id="signInEmail" class="form-control" placeholder="email" required>
+                  <label for="signInEmail">Email *</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="signInPassword" class="form-control" placeholder="password" required>
+                  <label for="signInPassword">Password *</label>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                  id="signIn">
+                  Sign In </button>
+                <div class="align-content-end">Not a member yet?
+                  <a class="small" id="switchToSignUp">Become Member</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- ************************************************************footer************************************** -->
+  <section class="sections"></section>
+
+  <footer class="footer-distributed">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-md-center text-sm-center text-center">
+        <div class="footer-left">
+
+          <img src="assets/dsc-logo.svg" alt="developerstudentcommunit" style="width:170px; ">
+
+          <br><br>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-md-center">
+
+        <div class="footer-right">
+
+          <p class="">Contact Us</p>
+
+          <form action="#" method="post">
+
+            <a href="mailto:bitddsc@gmail.com"> <input type="text" name="email" placeholder="Email"></a>
+
+
+          </form>
+          <br>
+          <div class="footer-icons">
+
+
+            <a href="https://www.instagram.com/bitddsc" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/BitdDsc" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/developer-student-community-bitd/" target="_blank"><i
+                class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="https://www.youtube.com/channel/UCT6bau44YmuFM3Qu_de6W_w" target="_blank"><i
+                class="fa fa-youtube"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+
+
+    <div class="col-12 text-center">
+      <p class="footer-company-name">© 2021 Developer Student Community | Developed by
+        <a href="https://www.linkedin.com/in/rahul-kesharwani-b50b46190/" target="_blank" class="footer-links">Rahul
+          Kesharwani</a> & <a href="https://www.linkedin.com/in/hansaj-sharma-0366901b2/" target="_blank"
+          class="footer-links">Hansaj
+          Sharma</a>
+      </p>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- ====================Scripts================= -->
+  <script src="js/app.js"></script>
+  <script src="./js/faq.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+    document.getElementById("switchToSignIn").onclick = function () {
+      document.getElementById("signUpForm").style.display = "none";
+      document.getElementById("signInForm").style.display = "block";
+    }
+    document.getElementById("switchToSignUp").onclick = function () {
+      document.getElementById("signInForm").style.display = "none";
+      document.getElementById("signUpForm").style.display = "block";
+    }
+
+  </script>
+
+  <!-- 
+***********Firebase *************** -->
+
+  <script src="./js/firebaseConfig.js"></script>
+
+  <script src="./js/auth.js"></script>
+  <script>
+
+    var check = 0;
+    function signUp() {
+      check = 1;
+      var email = document.getElementById("signUpEmail").value;
+      var password = document.getElementById("signUpPassword").value;
+      var confirmPass = document.getElementById("confirmInputPassword").value;
+      // var gn = document.getElementById("gender").value;
+
+      if (email == "" || password == "") {
+        alert("please enter all the detail");
+      } else if (password != confirmPass) {
+        alert("Password and Confirm Password not matches");
+      }
+      else {
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ..
+
+          });
+
+      }
+    }
+
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.
+
+
+        var user = firebase.auth().currentUser;
+        // var UID = firebase.auth().currentUser.uid;
+        if (user != null) {
+          if (check == 1) {
+            window.location.href = "newdetail.html";
+
+          }
+          else
+            window.location.href = "profile.html";
+        }
+
+      } else {
+        // No user is signed in.
+
+      }
+    });
+
+  </script>
+  <script type="text/javascript" src="./js/wow.min.js"></script>
+  <script type="text/javascript" src="./js/wow.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+
+</body>
+
+</html>
